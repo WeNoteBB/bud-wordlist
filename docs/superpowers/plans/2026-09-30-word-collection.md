@@ -187,6 +187,8 @@ wordlist/
 </dependency>
 
 <!-- 数据库版本化迁移 -->
+
+
 <dependency>
     <groupId>org.flywaydb</groupId>
     <artifactId>flyway-core</artifactId>

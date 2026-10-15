@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(plink -ssh -pw 'wysnaa0903' root@8.138.161.122 \"echo '=== whoami ==='; whoami; hostname; echo '=== os ==='; cat /etc/os-release 2>/dev/null | head -3; echo '=== mysql binaries ==='; which mysql mysqld mariadb 2>/dev/null; echo '=== service ==='; systemctl is-active mysql 2>/dev/null; systemctl is-active mysqld 2>/dev/null; echo '=== port 3306 ==='; ss -lntp 2>/dev/null | grep 3306; echo '=== my.cnf ==='; ls -la /root/.my.cnf 2>/dev/null; echo '=== docker ==='; which docker 2>/dev/null && docker ps --format '{{.Names}}\\\\t{{.Image}}\\\\t{{.Ports}}' 2>/dev/null | head\")",
+      "Bash(plink -ssh -batch -pw 'wysnaa0903' root@8.138.161.122 \"whoami\")",
+      "Bash(plink -ssh -v -batch -pw 'wysnaa0903' root@8.138.161.122 \"whoami\")",
+      "Bash(ls -la ~/.ssh/ 2>&1 | head -20)",
+      "Read(//c/Users/89300/.ssh/**)",
+      "Bash(ssh-keygen -t ed25519 -f ~/.ssh/wordlist_ecs -N \"\" -C \"claude-code-wordlist\" -q)"
+    ]
+  }
+}
